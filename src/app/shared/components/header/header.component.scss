@@ -1,0 +1,56 @@
+:host {
+  height: 50px;
+  display: flex;
+  padding: 10px 50px;
+  background-color: #0c0b0b;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  &-title {
+    color: white;
+    span {
+      color: orangered;
+    }
+  }
+  &-links {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+    * {
+      margin: 10px 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: grey;
+      cursor: pointer;
+      &.active {
+        color: white;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+    &-button {
+      background-color: orangered;
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      width: 100px;
+      height: 30px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

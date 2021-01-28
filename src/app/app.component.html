@@ -1,2 +1,16 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header (clickEmitter)="goTo()"></app-header>
+<main class="container">
+  <section>
+    <app-home></app-home>
+  </section>
+  <section>
+    <app-people></app-people>
+  </section>
+  <section>
+    <app-testimonials></app-testimonials>
+  </section>
+  <section>
+    <app-reach-us></app-reach-us>
+  </section>
+</main>
+

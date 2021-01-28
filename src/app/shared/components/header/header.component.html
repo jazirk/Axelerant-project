@@ -1,1 +1,7 @@
-<p>header works!</p>
+<nav class="navbar">
+  <div class="navbar-title">COMPANY <span>LOGO</span></div>
+  <div class="navbar-links">
+    <a *ngFor="let item of navItems" (click)="goTo(item)">{{item}}</a>
+    <app-button>Get in touch</app-button>
+  </div>
+</nav>

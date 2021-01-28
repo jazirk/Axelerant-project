@@ -1,0 +1,17 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.people-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 50px;
+}
+.people-image {
+  background: url("map.jpg") center center no-repeat;
+}

@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {HomeComponent} from './core/components/home/home.component';
-import {PeopleComponent} from './core/components/people/people.component';
+//import {PeopleComponent} from './core/components/people/people.component';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,10 @@ import {PeopleComponent} from './core/components/people/people.component';
 })
 export class AppComponent {
   @ViewChild(HomeComponent) homeComponet;
-  @ViewChild(PeopleComponent) peopleComponent;
+  //@ViewChild(PeopleComponent) peopleComponent;
   title = 'AcmeClient';
 
-  goTo() {
-    this.peopleComponent.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
-  }
+  // goTo() {
+  //   this.peopleComponent.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
+  // }
 }

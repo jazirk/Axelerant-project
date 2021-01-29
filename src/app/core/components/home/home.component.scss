@@ -1,3 +1,4 @@
+@import "./src/assets/styles/mixins";
 :host {
   width: 100%;
 }
@@ -19,11 +20,17 @@
     letter-spacing: 1px;
     font-size: 2em;
     margin-bottom: 10px;
+    padding: 2%;
   }
 
   &-service {
     display: flex;
     font-size: 1em;
+
+    @include main-mobile {
+      flex-direction: column;
+      width: 100%;
+    }
 
     &-image {
       display: flex;
@@ -34,11 +41,25 @@
       width: 180px;
       border: 1px groove wheat;
       margin: 10px;
+      padding: 5px;
+
+      @include main-mobile {
+        flex-direction: row;
+        height: 33.33%;
+        width: 95%;
+        justify-content: flex-start;
+      }
 
       img {
         width: 80px;
         height: auto;
         object-fit: cover;
+        margin-right: 10px;
+
+        @include main-mobile {
+          width: 20%;
+          padding: 2%
+        }
       }
     }
   }

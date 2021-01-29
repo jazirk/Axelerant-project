@@ -1,8 +1,14 @@
+@import "./src/assets/styles/mixins";
+
 :host {
   height: 50px;
   display: flex;
   padding: 10px 50px;
   background-color: #0c0b0b;
+
+  @include main-mobile {
+    padding: 0;
+  }
 }
 
 
@@ -11,6 +17,35 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
+
+  @include main-mobile {
+    justify-content: center;
+
+    &.open {
+      justify-content: flex-start;
+    }
+  }
+
+  &-hamburger {
+    display: none;
+
+    @include main-mobile {
+      display: block;
+      cursor: pointer;
+      z-index: 2;
+      position: absolute;
+      top: 1%;
+      left: 1%;
+
+      div {
+        width: 30px;
+        height:3px;
+        background: #f2f5f7;
+        margin: 5px;
+      }
+
+    }
+  }
 
   &-title {
     color: white;
@@ -27,8 +62,9 @@
       margin: 10px 20px;
     }
 
-    a {
+    li {
       text-decoration: none;
+      list-style: none;
       color: grey;
       cursor: pointer;
       &.active {
@@ -52,5 +88,26 @@
         transform: scale(1.2);
       }
     }
+
+    @include main-mobile {
+      position: fixed;
+      background: #131418;
+      height: 100vh;
+      width: 80%;
+      flex-direction: column;
+      pointer-events: none;
+      opacity: 0;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    &.open {
+      pointer-events: all;
+      opacity: 1;
+    }
   }
 }
+

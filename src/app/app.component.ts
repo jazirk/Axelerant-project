@@ -10,9 +10,14 @@ import {HomeComponent} from './core/components/home/home.component';
 export class AppComponent {
   @ViewChild(HomeComponent) homeComponet;
   //@ViewChild(PeopleComponent) peopleComponent;
+  hamburgerClickedEvent = false;
   title = 'AcmeClient';
 
-  // goTo() {
-  //   this.peopleComponent.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
-  // }
+  goTo() {
+  //   //this.peopleComponent.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
+  }
+
+  hamburgerClicked (clickEvent) {
+    this.hamburgerClickedEvent = clickEvent;
+  }
 }

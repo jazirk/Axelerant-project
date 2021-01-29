@@ -1,8 +1,16 @@
+@import "./src/assets/styles/mixins";
+
 :host {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @include main-mobile {
+    grid-template-columns: unset;
+    grid-template-rows: 70% 30%;
+    grid-row-gap: 1%;
+  }
 }
 
 .people-text {
@@ -11,7 +19,24 @@
   justify-content: center;
   flex-direction: column;
   padding-left: 50px;
+
+  @include main-mobile {
+    h1 {
+      font-size: 6.5vw;
+    }
+
+    p {
+      font-size: 5vw;
+    }
+  }
+
+
+
+  @include main-mobile {
+    padding: 5px;
+  }
 }
 .people-image {
   background: url("map.jpg") center center no-repeat;
+  margin: 1%;
 }

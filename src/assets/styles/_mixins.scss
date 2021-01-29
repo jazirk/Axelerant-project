@@ -4,6 +4,9 @@
   &::-webkit-scrollbar {
     width: 12px;
     background: $color-fog-grey;
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
   &::-webkit-scrollbar-track-piece {
     background: $color-fog-grey;
@@ -11,5 +14,11 @@
   &::-webkit-scrollbar-thumb {
     background: #aab9c7;
     border: 2px solid $color-fog-grey;
+  }
+}
+
+@mixin main-mobile {
+  @media screen and (max-width: 800px) {
+    @content;
   }
 }

@@ -1,4 +1,4 @@
-<app-header (clickEmitter)="goTo()"></app-header>
+<app-header [class.open]="hamburgerClickedEvent" (hamburgerClickedEmitter)="hamburgerClicked($event)" (clickEmitter)="goTo()"></app-header>
 <main class="container">
   <section>
     <app-home></app-home>

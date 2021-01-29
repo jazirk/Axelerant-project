@@ -1,4 +1,4 @@
-
+@import "./src/assets/styles/mixins";
 :host {
 
 }
@@ -17,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 2%;
 
     &-title, &-sub-title {
       color: white;
@@ -25,6 +27,11 @@
       align-items: center;
       padding: 5px;
       font-size: 3rem;
+      margin-bottom: 1%;
+
+      @include main-mobile {
+        font-size: 10vw;
+      }
     }
 
     &-sub-title {
@@ -35,19 +42,40 @@
       display: flex;
       flex-direction: column;
       place-items: center;
-      width: 80%;
+      width: 50%;
       height: 50%;
-      justify-content: space-evenly;
+      @include main-mobile {
+        width: 100%;
+      }
+
 
       div {
         width: 100%;
+        height: 100%;
         display: flex;
         justify-content: space-between;
-        height: 30px;
+        margin-bottom: 2%;
+
+        @include main-mobile {
+          flex-direction: column;
+          height: unset;
+        }
       }
 
       div:nth-child(3) {
         justify-content: center;
+      }
+
+      input {
+        width: 33.33%;
+        &:not(:last-of-type) {
+          margin-right: 5px;
+        }
+        @include main-mobile {
+          width: 100%;
+          margin-bottom: 1%;
+          height: 10vw;
+        }
       }
       textarea {
         width: 100%;

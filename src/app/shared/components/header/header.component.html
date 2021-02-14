@@ -1,12 +1,15 @@
 <nav [class.open]="hamburgerClicked" class="navbar">
-  <div [class.open]="hamburgerClicked" (click)="navClicked()" class="navbar-hamburger">
+  <div tabindex="0" [class.open]="hamburgerClicked" (click)="navClicked()" class="navbar-hamburger">
     <div class="line1"></div>
     <div class="line2"></div>
     <div class="line3"></div>
   </div>
-  <div class="navbar-title">COMPANY <span>LOGO</span></div>
+  <div tabindex="0" class="navbar-title">COMPANY <span>LOGO</span></div>
   <ul [class.open]="hamburgerClicked" class="navbar-links">
-    <li *ngFor="let item of navItems" (click)="goTo(item)">{{item}}</li>
+    <li tabindex="0" *ngFor="let item of navItems" (click)="goTo(item)">
+       <span class="navbar-links__content" tabindex="-1">
+        {{item}}
+    </span></li>
     <app-button>Get in touch</app-button>
   </ul>
 </nav>
